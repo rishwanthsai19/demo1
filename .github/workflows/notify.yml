@@ -1,0 +1,26 @@
+name: Deployment Notification
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: [completed]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify on Success
+        if: ${{ github.event.workflow_run.conclusion == 'success' }}
+        run: |
+          echo "Deployment successful!"
+          echo "Site live at: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          # Uncomment below if Slack webhook is configured:
+          # curl -X POST -H 'Content-type: application/json' \
+          #   --data '{"text":"Profile site deployed!"}' \
+          #   ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Notify on Failure
+        if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+        run: |
+          echo "Deployment FAILED! Check the Actions tab."
+          # curl -X POST -H 'Content-type: application/json' \
+          #   --data '{"text":"Deployment failed. Check Actions tab."}' \
+          #   ${{ secrets.SLACK_WEBHOOK_URL }}
