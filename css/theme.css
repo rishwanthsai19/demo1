@@ -1,49 +1,50 @@
 /* THEME FILE: CSS variables ONLY. Change this file to re-theme the whole site.
+   Theme: FRESH GREEN (mint, leaf green, lime)
    :root           = default light theme
    [data-theme]    = dark palette used by the navbar toggle (still variables only) */
 :root {
   /* Primary Colors */
-  --color-primary: #2b2f8f;
-  --color-primary-light: #4a5bf0;
-  --color-primary-dark: #14174f;
+  --color-primary: #06b6d4;
+  --color-primary-light: #22d3ee;
+  --color-primary-dark: #0e7490;
 
   /* Background Colors */
-  --color-bg: #f4f7fc;
-  --color-bg-secondary: #e8eef9;
+  --color-bg: #f1f5f9;
+  --color-bg-secondary: #e2e8f0;
   --color-bg-card: #ffffff;
 
   /* Text Colors */
-  --color-text: #1c2040;
-  --color-text-secondary: #55597a;
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
   --color-text-inverse: #ffffff;
   --color-on-primary: #ffffff;
   --color-on-accent: #ffffff;
   --color-on-gradient: #ffffff;
 
   /* Accent & Borders */
-  --color-accent: #e0356a;
-  --color-accent-soft: #ffe3ec;
-  --color-border: #d5dcee;
-  --color-shadow: rgba(20, 23, 79, 0.14);
-  --color-overlay: rgba(10, 12, 40, 0.82);
-  --color-glass: rgba(255, 255, 255, 0.14);
-  --color-glass-strong: rgba(255, 255, 255, 0.24);
-  --color-nav-bg: rgba(244, 247, 252, 0.9);
-  --color-focus: #e0356a;
+  --color-accent: #8b5cf6;
+  --color-accent-soft: #f3e8ff;
+  --color-border: #cbd5e1;
+  --color-shadow: rgba(139, 92, 246, 0.15);
+  --color-overlay: rgba(15, 23, 42, 0.85);
+  --color-glass: rgba(255, 255, 255, 0.15);
+  --color-glass-strong: rgba(255, 255, 255, 0.25);
+  --color-nav-bg: rgba(241, 245, 249, 0.9);
+  --color-focus: #8b5cf6;
 
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #14174f 0%, #2b2f8f 55%, #5b6cff 100%);
-  --gradient-a: linear-gradient(145deg, #2b2f8f, #5b6cff);
-  --gradient-b: linear-gradient(145deg, #0f766e, #2dd4bf);
-  --gradient-c: linear-gradient(145deg, #be185d, #ff5c8a);
-  --gradient-d: linear-gradient(145deg, #b45309, #fbbf24);
+  --gradient-hero: linear-gradient(135deg, #09090b 0%, #0e7490 55%, #8b5cf6 100%);
+  --gradient-a: linear-gradient(145deg, #06b6d4, #3b82f6);
+  --gradient-b: linear-gradient(145deg, #8b5cf6, #a855f7);
+  --gradient-c: linear-gradient(145deg, #6366f1, #d946ef);
+  --gradient-d: linear-gradient(145deg, #10b981, #06b6d4);
 
   /* Typography */
-  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-heading: 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', 'Trebuchet MS', 'Arial Black', sans-serif;
   --font-size-base: 16px;
-  --font-size-h1: 4.5rem;
-  --font-size-h2: 2.4rem;
+  --font-size-h1: clamp(2.75rem, 6vw, 4.75rem);
+  --font-size-h2: clamp(1.85rem, 3.5vw, 2.6rem);
 
   /* Spacing */
   --spacing-sm: 0.5rem;
@@ -59,64 +60,64 @@
 
 /* Dark palette (applied when the toggle sets data-theme="dark") */
 :root[data-theme="dark"] {
-  --color-primary: #8c9bff;
-  --color-primary-light: #8c9bff;
-  --color-primary-dark: #090b1f;
+  --color-primary: #22d3ee;
+  --color-primary-light: #67e8f9;
+  --color-primary-dark: #0891b2;
 
-  --color-bg: #0d1021;
-  --color-bg-secondary: #131735;
-  --color-bg-card: #1a1f45;
+  --color-bg: #09090b;
+  --color-bg-secondary: #18181b;
+  --color-bg-card: #27272a;
 
-  --color-text: #e7e9fb;
-  --color-text-secondary: #a9aed3;
-  --color-text-inverse: #0d1021;
-  --color-on-primary: #0d1030;
-  --color-on-accent: #2a0716;
+  --color-text: #f4f4f5;
+  --color-text-secondary: #a1a1aa;
+  --color-text-inverse: #09090b;
+  --color-on-primary: #09090b;
+  --color-on-accent: #09090b;
   --color-on-gradient: #ffffff;
 
-  --color-accent: #ff7aa2;
-  --color-accent-soft: #3a1a2c;
-  --color-border: #2a3066;
-  --color-shadow: rgba(0, 0, 0, 0.5);
-  --color-overlay: rgba(3, 4, 14, 0.88);
+  --color-accent: #a855f7;
+  --color-accent-soft: #2e1065;
+  --color-border: #3f3f46;
+  --color-shadow: rgba(0, 0, 0, 0.7);
+  --color-overlay: rgba(5, 5, 7, 0.9);
   --color-glass: rgba(255, 255, 255, 0.08);
-  --color-glass-strong: rgba(255, 255, 255, 0.16);
-  --color-nav-bg: rgba(13, 16, 33, 0.88);
-  --color-focus: #ff7aa2;
+  --color-glass-strong: rgba(255, 255, 255, 0.18);
+  --color-nav-bg: rgba(9, 9, 11, 0.9);
+  --color-focus: #a855f7;
 
-  --gradient-hero: linear-gradient(135deg, #070918 0%, #171c52 55%, #3a3fb0 100%);
-  --gradient-a: linear-gradient(145deg, #2f35a8, #6b7bff);
-  --gradient-b: linear-gradient(145deg, #0b5f59, #1fb8a6);
-  --gradient-c: linear-gradient(145deg, #9d174d, #e8467c);
-  --gradient-d: linear-gradient(145deg, #92400e, #d99a1a);
+  --gradient-hero: linear-gradient(135deg, #09090b 0%, #18181b 55%, #7c3aed 100%);
+  --gradient-a: linear-gradient(145deg, #0891b2, #22d3ee);
+  --gradient-b: linear-gradient(145deg, #7c3aed, #a855f7);
+  --gradient-c: linear-gradient(145deg, #4f46e5, #c084fc);
+  --gradient-d: linear-gradient(145deg, #059669, #10b981);
 }
 
 /* Family section: warm sub-palette (section-scoped override) */
 #family {
-  --color-primary: #b45309;
-  --color-primary-light: #d97706;
-  --color-primary-dark: #7c2d12;
-  --color-on-primary: #ffffff;
-  --color-bg: #fff3ea;
-  --color-bg-secondary: #ffe4d1;
-  --color-bg-card: #fffaf6;
-  --color-text: #4a2412;
-  --color-text-secondary: #8a5a3c;
-  --color-accent: #e11d48;
-  --color-border: #f3c9aa;
-  --color-shadow: rgba(124, 45, 18, 0.18);
-}
-:root[data-theme="dark"] #family {
   --color-primary: #f59e0b;
   --color-primary-light: #fbbf24;
-  --color-primary-dark: #fcd9a8;
-  --color-on-primary: #2a1405;
-  --color-bg: #24140d;
-  --color-bg-secondary: #2f1c12;
-  --color-bg-card: #3a2216;
-  --color-text: #fde8d6;
-  --color-text-secondary: #d2a98a;
-  --color-accent: #fb7185;
-  --color-border: #5a3822;
-  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-primary-dark: #b45309;
+  --color-on-primary: #ffffff;
+  --color-bg: #fffbeb;
+  --color-bg-secondary: #fef3c7;
+  --color-bg-card: #ffffff;
+  --color-text: #451a03;
+  --color-text-secondary: #92400e;
+  --color-accent: #f97316;
+  --color-border: #fde68a;
+  --color-shadow: rgba(180, 83, 9, 0.2);
+}
+:root[data-theme="dark"] #family {
+  --color-primary: #fbbf24;
+  --color-primary-light: #fde68a;
+  --color-primary-dark: #d97706;
+  --color-on-primary: #1c1917;
+  --color-bg: #1c1917;
+  --color-bg-secondary: #292524;
+  --color-bg-card: #3f3f46;
+  --color-text: #fef3c7;
+  --color-text-secondary: #fcd34d;
+  --color-accent: #fb923c;
+  --color-border: #57534e;
+  --color-shadow: rgba(0, 0, 0, 0.7);
 }
